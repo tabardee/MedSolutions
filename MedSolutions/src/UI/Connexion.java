@@ -38,6 +38,7 @@ public class Connexion extends javax.swing.JFrame {
         LogoCHU = new javax.swing.JLabel();
         photomdp = new javax.swing.JLabel();
         LogoMedSolutions = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,9 +68,20 @@ public class Connexion extends javax.swing.JFrame {
         pwd.setEchoChar('*');
 
         connexion.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        connexion.setText("Connexion");
+        connexion.setText("Valider");
+        connexion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                connexionActionPerformed(evt);
+            }
+        });
 
-        TitrePage.setFont(TitrePage.getFont().deriveFont(TitrePage.getFont().getStyle() | java.awt.Font.BOLD, TitrePage.getFont().getSize()+11));
+        id_saisi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                id_saisiActionPerformed(evt);
+            }
+        });
+
+        TitrePage.setFont(TitrePage.getFont().deriveFont((TitrePage.getFont().getStyle() | java.awt.Font.ITALIC) | java.awt.Font.BOLD, TitrePage.getFont().getSize()+11));
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
         TitrePage.setText("Bienvenue sur votre système d'information");
 
@@ -82,6 +94,9 @@ public class Connexion extends javax.swing.JFrame {
 
         LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_medsolutions.png"))); // NOI18N
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Connexion");
+
         Connexion.revalidate();
         Connexion.repaint();
 
@@ -90,67 +105,69 @@ public class Connexion extends javax.swing.JFrame {
         ConnexionLayout.setHorizontalGroup(
             ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConnexionLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(ConnexionLayout.createSequentialGroup()
+                .addGap(223, 223, 223)
+                .addComponent(jLabel1))
+            .addGroup(ConnexionLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(LogoMedSolutions)
+                .addGap(26, 26, 26)
+                .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(photoid)
+                    .addGroup(ConnexionLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(photomdp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConnexionLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ConnexionLayout.createSequentialGroup()
-                                .addComponent(photoid)
-                                .addGap(8, 8, 8)
-                                .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(id_saisi, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ConnexionLayout.createSequentialGroup()
-                                .addComponent(photomdp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10)
-                                .addComponent(mdp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(id_saisi, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConnexionLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(connexion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(mdp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConnexionLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(LogoMedSolutions)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addComponent(connexion)))
+                .addGap(146, 146, 146)
+                .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         ConnexionLayout.setVerticalGroup(
-            ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConnexionLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addGap(13, 13, 13)
                 .addComponent(TitrePage)
+                .addGap(80, 80, 80)
+                .addComponent(jLabel1)
+                .addGap(3, 3, 3)
                 .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConnexionLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(ConnexionLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(143, 143, 143)
+                        .addComponent(LogoMedSolutions))
+                    .addGroup(ConnexionLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(photoid)
+                        .addGap(5, 5, 5)
+                        .addComponent(photomdp))
+                    .addGroup(ConnexionLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
                         .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(photoid)
                             .addGroup(ConnexionLayout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(id_saisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(3, 3, 3)
+                                .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(id_saisi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(5, 5, 5)
                         .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(photomdp)
-                            .addGroup(ConnexionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(mdp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 22, Short.MAX_VALUE)
-                        .addComponent(connexion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LogoMedSolutions)
-                        .addContainerGap(26, Short.MAX_VALUE))))
+                            .addGroup(ConnexionLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(mdp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(connexion))
+                    .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -161,10 +178,10 @@ public class Connexion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(Connexion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -177,6 +194,17 @@ public class Connexion extends javax.swing.JFrame {
     private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idActionPerformed
+
+    private void connexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connexionActionPerformed
+        // TODO add your handling code here:
+        AccueilMedecins accueilMedecins = new AccueilMedecins();
+        accueilMedecins.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_connexionActionPerformed
+
+    private void id_saisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_saisiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_saisiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,6 +249,7 @@ public class Connexion extends javax.swing.JFrame {
     private javax.swing.JButton connexion;
     private javax.swing.JTextField id;
     private javax.swing.JTextField id_saisi;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField mdp;
     private javax.swing.JLabel photoid;
     private javax.swing.JLabel photomdp;

@@ -16,6 +16,15 @@ public class RechercherPatient extends javax.swing.JFrame {
      */
     public RechercherPatient() {
         initComponents();
+        setFullScreen();
+        
+    }
+    
+        private void setFullScreen() {
+        // Obtenez la taille de l'écran
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        // Définissez la taille de la JFrame pour couvrir l'écran
+        setSize(screenSize.width, screenSize.height-50);
     }
 
     /**
@@ -107,7 +116,7 @@ public class RechercherPatient extends javax.swing.JFrame {
             }
         });
 
-        TitrePage.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        TitrePage.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
         TitrePage.setText("Princeton Plainsboro - Rechercher un patient");
 
