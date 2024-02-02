@@ -42,12 +42,16 @@ public class FichePatient extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         date1 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        infoAdresse1 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        infoNumSS1 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
         TitrePage = new javax.swing.JLabel();
         Retour = new javax.swing.JButton();
         LogoMedSolutions = new javax.swing.JLabel();
         LogoCHU = new javax.swing.JLabel();
-        DMA = new javax.swing.JPanel();
-        DM = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(0, 0));
@@ -75,71 +79,94 @@ public class FichePatient extends javax.swing.JFrame {
         date1.setFont(new java.awt.Font("Helvetica Neue", 2, 12)); // NOI18N
         date1.setText("Sexe");
 
+        infoAdresse1.setFont(new java.awt.Font("Helvetica Neue", 2, 12)); // NOI18N
+        infoAdresse1.setText("Service");
+
+        infoNumSS1.setFont(new java.awt.Font("Helvetica Neue", 2, 12)); // NOI18N
+        infoNumSS1.setText("N° de chambre");
+
         javax.swing.GroupLayout InfoPatientLayout = new javax.swing.GroupLayout(InfoPatient);
         InfoPatient.setLayout(InfoPatientLayout);
         InfoPatientLayout.setHorizontalGroup(
             InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoPatientLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(InfoPatientLayout.createSequentialGroup()
-                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(infoAdresse)
-                            .addComponent(infoNumSS))
-                        .addGap(18, 18, 18)
-                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)))
+                        .addComponent(infoN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(InfoPatientLayout.createSequentialGroup()
-                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(InfoPatientLayout.createSequentialGroup()
-                                .addComponent(date1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(InfoPatientLayout.createSequentialGroup()
-                                .addComponent(infoN)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField1)))
+                        .addComponent(infoAdresse)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(date, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoPatientLayout.createSequentialGroup()
-                                .addComponent(infoP)
-                                .addGap(29, 29, 29)))
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(InfoPatientLayout.createSequentialGroup()
+                        .addComponent(infoNumSS)
                         .addGap(18, 18, 18)
-                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                            .addComponent(jTextField5))))
-                .addGap(35, 35, 35))
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InfoPatientLayout.createSequentialGroup()
+                        .addComponent(infoP)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(InfoPatientLayout.createSequentialGroup()
+                        .addComponent(infoAdresse1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField7))
+                    .addGroup(InfoPatientLayout.createSequentialGroup()
+                        .addComponent(date1)
+                        .addGap(31, 31, 31)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(date)
+                    .addComponent(infoNumSS1))
+                .addGap(18, 18, 18)
+                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        InfoPatientLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6});
+
         InfoPatientLayout.setVerticalGroup(
             InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoPatientLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(infoN)
-                    .addComponent(infoP)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InfoPatientLayout.createSequentialGroup()
-                        .addComponent(date1)
-                        .addGap(5, 5, 5))
-                    .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(date)
-                        .addComponent(jTextField5)
-                        .addComponent(jTextField6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(48, 48, 48)
+                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(infoN)
+                                .addComponent(infoP)
+                                .addComponent(date1)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoPatientLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(date)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3)
-                    .addComponent(infoAdresse))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(infoAdresse)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(infoNumSS)
-                    .addComponent(jTextField4))
-                .addGap(19, 19, 19))
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(InfoPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(infoAdresse1)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(infoNumSS1)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(84, 84, 84))
         );
+
+        InfoPatientLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6});
 
         TitrePage.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
@@ -153,37 +180,15 @@ public class FichePatient extends javax.swing.JFrame {
             }
         });
 
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_medsolutions.png"))); // NOI18N
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
 
-        LogoCHU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.PNG"))); // NOI18N
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
 
-        DMA.setBackground(new java.awt.Color(255, 255, 255));
-        DMA.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DMA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton1.setText("DMA");
 
-        javax.swing.GroupLayout DMALayout = new javax.swing.GroupLayout(DMA);
-        DMA.setLayout(DMALayout);
-        DMALayout.setHorizontalGroup(
-            DMALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
-        );
-        DMALayout.setVerticalGroup(
-            DMALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 142, Short.MAX_VALUE)
-        );
-
-        DM.setBackground(new java.awt.Color(255, 255, 255));
-        DM.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DM", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
-
-        javax.swing.GroupLayout DMLayout = new javax.swing.GroupLayout(DM);
-        DM.setLayout(DMLayout);
-        DMLayout.setHorizontalGroup(
-            DMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
-        );
-        DMLayout.setVerticalGroup(
-            DMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 146, Short.MAX_VALUE)
-        );
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton2.setText("DM");
 
         javax.swing.GroupLayout FichePatientLayout = new javax.swing.GroupLayout(FichePatient);
         FichePatient.setLayout(FichePatientLayout);
@@ -192,27 +197,32 @@ public class FichePatient extends javax.swing.JFrame {
             .addGroup(FichePatientLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FichePatientLayout.createSequentialGroup()
-                        .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Retour)
-                        .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FichePatientLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(InfoPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FichePatientLayout.createSequentialGroup()
+                    .addGroup(FichePatientLayout.createSequentialGroup()
+                        .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Retour)
+                        .addGap(10, 10, 10))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FichePatientLayout.createSequentialGroup()
+                .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FichePatientLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(79, 79, 79)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(FichePatientLayout.createSequentialGroup()
                         .addComponent(LogoMedSolutions)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LogoCHU)
-                        .addContainerGap())))
-            .addGroup(FichePatientLayout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(DMA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 150, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(LogoCHU)
+                .addContainerGap())
         );
+
+        FichePatientLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2});
+
         FichePatientLayout.setVerticalGroup(
             FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FichePatientLayout.createSequentialGroup()
@@ -220,21 +230,24 @@ public class FichePatient extends javax.swing.JFrame {
                 .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TitrePage)
                     .addComponent(Retour))
-                .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addComponent(InfoPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(FichePatientLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(InfoPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(DMA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(DM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(37, 37, 37)
+                        .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)))
+                    .addGroup(FichePatientLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LogoCHU))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FichePatientLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 451, Short.MAX_VALUE)
-                        .addGroup(FichePatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LogoCHU)
-                            .addComponent(LogoMedSolutions)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LogoMedSolutions)))
+                .addGap(0, 32, Short.MAX_VALUE))
         );
+
+        FichePatientLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -244,7 +257,9 @@ public class FichePatient extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(FichePatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FichePatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -300,8 +315,6 @@ public class FichePatient extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel DM;
-    private javax.swing.JPanel DMA;
     private javax.swing.JPanel FichePatient;
     private javax.swing.JPanel InfoPatient;
     private javax.swing.JLabel LogoCHU;
@@ -311,14 +324,20 @@ public class FichePatient extends javax.swing.JFrame {
     private javax.swing.JLabel date;
     private javax.swing.JLabel date1;
     private javax.swing.JLabel infoAdresse;
+    private javax.swing.JLabel infoAdresse1;
     private javax.swing.JLabel infoN;
     private javax.swing.JLabel infoNumSS;
+    private javax.swing.JLabel infoNumSS1;
     private javax.swing.JLabel infoP;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

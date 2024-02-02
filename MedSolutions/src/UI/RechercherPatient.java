@@ -61,6 +61,7 @@ public class RechercherPatient extends javax.swing.JFrame {
         LogoCHU = new javax.swing.JLabel();
         LogoMedSolutions = new javax.swing.JLabel();
         DossierPatient = new javax.swing.JScrollPane();
+        Retour = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,12 +133,20 @@ public class RechercherPatient extends javax.swing.JFrame {
             }
         });
 
-        LogoCHU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.PNG"))); // NOI18N
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
         LogoCHU.setPreferredSize(new java.awt.Dimension(250, 414));
 
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_medsolutions.png"))); // NOI18N
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
 
         DossierPatient.setBorder(javax.swing.BorderFactory.createTitledBorder("Dossier du patient"));
+
+        Retour.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Retour.setText("Retour");
+        Retour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetourActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout RechercherPatientLayout = new javax.swing.GroupLayout(RechercherPatient);
         RechercherPatient.setLayout(RechercherPatientLayout);
@@ -199,14 +208,21 @@ public class RechercherPatient extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RechercherPatientLayout.createSequentialGroup()
+                        .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RechercherPatientLayout.createSequentialGroup()
+                        .addComponent(Retour)
+                        .addContainerGap())))
         );
         RechercherPatientLayout.setVerticalGroup(
             RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RechercherPatientLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TitrePage)
+                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TitrePage)
+                    .addComponent(Retour))
                 .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RechercherPatientLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -305,6 +321,13 @@ public class RechercherPatient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SexeTextFieldActionPerformed
 
+    private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
+        // TODO add your handling code here:
+        AccueilMedecins accueilMedecins = new AccueilMedecins();
+        accueilMedecins.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_RetourActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -359,6 +382,7 @@ public class RechercherPatient extends javax.swing.JFrame {
     private javax.swing.JLabel Prenom;
     private javax.swing.JTextField PrenomTextField;
     private javax.swing.JPanel RechercherPatient;
+    private javax.swing.JButton Retour;
     private javax.swing.JLabel Rue;
     private javax.swing.JTextField RueTextField;
     private javax.swing.JLabel Sexe;

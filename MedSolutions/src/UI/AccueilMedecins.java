@@ -49,9 +49,9 @@ public class AccueilMedecins extends javax.swing.JFrame {
             }
         });
 
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_medsolutions.png"))); // NOI18N
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
 
-        LogoCHU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.PNG"))); // NOI18N
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
         LogoCHU.setPreferredSize(new java.awt.Dimension(250, 414));
 
         Deconnexion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N

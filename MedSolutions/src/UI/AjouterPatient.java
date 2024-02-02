@@ -149,9 +149,9 @@ public class AjouterPatient extends javax.swing.JFrame {
         Retour.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Retour.setText("Retour");
 
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_medsolutions.png"))); // NOI18N
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/image/logo_medsolutions.png"))); // NOI18N
 
-        LogoCHU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.PNG"))); // NOI18N
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
         LogoCHU.setPreferredSize(new java.awt.Dimension(250, 414));
 
         Sexe.setText("Sexe");
