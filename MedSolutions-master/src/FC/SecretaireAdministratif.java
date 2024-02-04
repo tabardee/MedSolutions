@@ -8,7 +8,6 @@ package FC;
 public class SecretaireAdministratif extends Utilisateurs {
     private String nom;
     private String prenom;
-    private String acces;
     private String mdp;
     private String id;
     
@@ -18,16 +17,68 @@ public class SecretaireAdministratif extends Utilisateurs {
         this.prenom = prenom;
         this.id = id;
         this.mdp = mdp;
-        this.acces="ADMINISTRATIVE";// Permet de definir les droits d’acces à l’application ( en mode des fonctionnalités restreintes quoi ) Supposons on 
-        //a une fonctionnalité "gestion des DMA", l'acces va vérifier si c'est bien ADMINISTRATIVe, si c le cas l'acces est autorisé, sinon non
-
         }
     
-      public String getAcces() { return acces; }
     
     public String toString() {
-        return "Secrétaire administratif " + prenom + " " + nom + "; " + acces;
+        return "Secrétaire administratif " + getPrenom() + " " + getNom() ;
         }
+
+    /**
+     * @return the nom
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * @param nom the nom to set
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    /**
+     * @return the prenom
+     */
+    public String getPrenom() {
+        return prenom;
+    }
+
+    /**
+     * @param prenom the prenom to set
+     */
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    /**
+     * @return the mdp
+     */
+    public String getMdp() {
+        return mdp;
+    }
+
+    /**
+     * @param mdp the mdp to set
+     */
+    public void setMdp(String mdp) {
+        this.mdp = mdp;
+    }
+
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
     
 }
 

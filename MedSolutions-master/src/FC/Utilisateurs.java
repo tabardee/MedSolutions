@@ -10,7 +10,7 @@ package FC;
  *
  * @author pauli
  */
-public class Utilisateurs { //Est-ce qu'il faudrait créer une sous classe provate Secrétaire pour départager secrétaire médical et administratif?
+public abstract class Utilisateurs { //Est-ce qu'il faudrait créer une sous classe private Secrétaire pour départager secrétaire médical et administratif?
     String nom;
     String prenom;
     String mdp; 

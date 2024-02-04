@@ -10,15 +10,11 @@ public class PraticienHospitalier extends Utilisateurs{
     private String prenom;
     private Metiers metier;
     private String telephone;
-    private String id;
-    private String mdp;
 
-    public PraticienHospitalier(String nom, String prenom, Metiers metier, String telephone,String id, String mdp) {
-        super(nom,prenom,id,mdp); 
+    public PraticienHospitalier(String nom, String prenom, Metiers metier, String telephone, String id, String mdp) {
+        super(nom, prenom,id,mdp); 
         this.nom = nom;
         this.prenom = prenom;
-        this.id = id;
-        this.mdp = mdp;
         this.metier = metier;
         this.telephone = telephone;
      
@@ -68,15 +64,5 @@ public class PraticienHospitalier extends Utilisateurs{
 
     public String toString() {
         return "Praticien Hospitalier " + prenom + " " + nom + "; " + metier + "; " + telephone;
-    }
-
-//Verification que l’objet passe en parametre est bien une instance de Medecin avant de comparer avec le medecin courant
-    public boolean equals(Object o) {
-        if (o instanceof PraticienHospitalier) {
-            PraticienHospitalier p = (PraticienHospitalier) o;
-            return nom.equals(p.nom) && prenom.equals(p.prenom);
-        } else {
-            return false;
-        }
     }
 }
