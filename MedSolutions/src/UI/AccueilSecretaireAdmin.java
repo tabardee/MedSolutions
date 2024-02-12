@@ -9,12 +9,12 @@ package UI;
  *
  * @author emmat
  */
-public class AccueilMedecins extends javax.swing.JFrame {
+public class AccueilSecretaireAdmin extends javax.swing.JFrame {
 
     /**
      * Creates new form AcceuilMedecins
      */
-    public AccueilMedecins() {
+    public AccueilSecretaireAdmin() {
         initComponents();
         setFullScreen();
     }
@@ -50,7 +50,7 @@ public class AccueilMedecins extends javax.swing.JFrame {
         Medecins.setMaximumSize(new java.awt.Dimension(50000, 50000));
 
         Patients.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Patients.setText("Patients");
+        Patients.setText("Afficher les DMA Patients");
         Patients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PatientsActionPerformed(evt);
@@ -71,31 +71,33 @@ public class AccueilMedecins extends javax.swing.JFrame {
         });
 
         CreationDM.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        CreationDM.setText("Création d'un DM patient");
+        CreationDM.setText("Création d'un DMA Patient");
+        CreationDM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreationDMActionPerformed(evt);
+            }
+        });
 
         TitrePage.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
-        TitrePage.setText("Princeton Plainsboro - Médecins");
+        TitrePage.setText("Princeton Plainsboro - Secrétaire Administrative");
 
         javax.swing.GroupLayout MedecinsLayout = new javax.swing.GroupLayout(Medecins);
         Medecins.setLayout(MedecinsLayout);
         MedecinsLayout.setHorizontalGroup(
             MedecinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MedecinsLayout.createSequentialGroup()
-                .addGroup(MedecinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MedecinsLayout.createSequentialGroup()
-                        .addComponent(LogoMedSolutions)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CreationDM))
-                    .addGroup(MedecinsLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Patients, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(LogoMedSolutions)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MedecinsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CreationDM, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                    .addComponent(Patients, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedecinsLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437, Short.MAX_VALUE)
+                .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 367, Short.MAX_VALUE)
                 .addComponent(Deconnexion)
                 .addGap(25, 25, 25))
         );
@@ -158,6 +160,10 @@ public class AccueilMedecins extends javax.swing.JFrame {
         this.hide();
     }//GEN-LAST:event_PatientsActionPerformed
 
+    private void CreationDMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreationDMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CreationDMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,21 +181,23 @@ public class AccueilMedecins extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AccueilMedecins.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccueilSecretaireAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AccueilMedecins.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccueilSecretaireAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AccueilMedecins.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccueilSecretaireAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AccueilMedecins.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccueilSecretaireAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AccueilMedecins().setVisible(true);
+                new AccueilSecretaireAdmin().setVisible(true);
             }
         });
     }

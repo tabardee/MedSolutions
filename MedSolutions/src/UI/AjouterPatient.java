@@ -16,6 +16,14 @@ public class AjouterPatient extends javax.swing.JFrame {
      */
     public AjouterPatient() {
         initComponents();
+        setFullScreen();
+    }
+    
+        private void setFullScreen() {
+        // Obtenez la taille de l'écran
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        // Définissez la taille de la JFrame pour couvrir l'écran
+        setSize(screenSize.width, screenSize.height-50);
     }
 
     /**
@@ -49,10 +57,10 @@ public class AjouterPatient extends javax.swing.JFrame {
         Valider = new javax.swing.JButton();
         Annuler = new javax.swing.JButton();
         Retour = new javax.swing.JButton();
-        LogoMedSolutions = new javax.swing.JLabel();
-        LogoCHU = new javax.swing.JLabel();
         Sexe = new javax.swing.JLabel();
         SexeTextField = new javax.swing.JTextField();
+        LogoCHU = new javax.swing.JLabel();
+        LogoMedSolutions = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,11 +156,11 @@ public class AjouterPatient extends javax.swing.JFrame {
 
         Retour.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Retour.setText("Retour");
-
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/image/logo_medsolutions.png"))); // NOI18N
-
-        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
-        LogoCHU.setPreferredSize(new java.awt.Dimension(250, 414));
+        Retour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetourActionPerformed(evt);
+            }
+        });
 
         Sexe.setText("Sexe");
 
@@ -162,18 +170,22 @@ public class AjouterPatient extends javax.swing.JFrame {
             }
         });
 
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
+
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
+
         javax.swing.GroupLayout AjouterPatientLayout = new javax.swing.GroupLayout(AjouterPatient);
         AjouterPatient.setLayout(AjouterPatientLayout);
         AjouterPatientLayout.setHorizontalGroup(
             AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AjouterPatientLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                        .addComponent(LogoMedSolutions)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
+                        .addContainerGap(100, Short.MAX_VALUE)
                         .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Adresse)
+                            .addGroup(AjouterPatientLayout.createSequentialGroup()
+                                .addComponent(Adresse)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(AjouterPatientLayout.createSequentialGroup()
                                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(NumIPP)
@@ -215,22 +227,24 @@ public class AjouterPatient extends javax.swing.JFrame {
                                                         .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                             .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                             .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(74, 74, 74)))
-                                                .addGap(0, 149, Short.MAX_VALUE))
+                                                        .addGap(74, 74, 74))))
                                             .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                        .addGap(25, 25, 25)
-                                                        .addComponent(Ville, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(Valider)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                                .addGap(25, 25, 25)
+                                                .addComponent(Ville, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(AjouterPatientLayout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(Valider)))
+                                        .addGap(0, 149, Short.MAX_VALUE))))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Retour)))
+                        .addComponent(Retour))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LogoMedSolutions)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LogoCHU)))
                 .addContainerGap())
         );
 
@@ -240,10 +254,10 @@ public class AjouterPatient extends javax.swing.JFrame {
             AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AjouterPatientLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Retour)
                     .addComponent(TitrePage))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,19 +265,19 @@ public class AjouterPatient extends javax.swing.JFrame {
                         .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Nom, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DateNaissance)
+                    .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Sexe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(DateNaissance)
-                            .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Sexe))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NumIPP)
-                            .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addComponent(Adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NumIPP)
+                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addComponent(Adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AjouterPatientLayout.createSequentialGroup()
                         .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AjouterPatientLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -282,20 +296,16 @@ public class AjouterPatient extends javax.swing.JFrame {
                             .addGroup(AjouterPatientLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(CodePostal)))
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Annuler)
-                                    .addComponent(Valider))
-                                .addContainerGap(100, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LogoMedSolutions)
-                                .addGap(22, 22, 22))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                        .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(12, 12, 12)
+                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Annuler)
+                            .addComponent(Valider))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LogoCHU))
+                    .addGroup(AjouterPatientLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LogoMedSolutions)))
+                .addContainerGap())
         );
 
         AjouterPatientLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CodePostalTextField, DateNaisanceTextField, NomTextField, NumIPPTextField, PrenomTextField, RueTextField, SexeTextField, VilleTextField});
@@ -346,9 +356,7 @@ public class AjouterPatient extends javax.swing.JFrame {
 
     private void AnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnulerActionPerformed
 
-        Patients p = new Patients();
-        p.setVisible(true);
-        this.hide();
+        
     }//GEN-LAST:event_AnnulerActionPerformed
 
     private void SexeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexeTextFieldActionPerformed
@@ -366,6 +374,13 @@ public class AjouterPatient extends javax.swing.JFrame {
     private void PrenomTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrenomTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PrenomTextFieldActionPerformed
+
+    private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
+        // TODO add your handling code here:
+        Patients p = new Patients();
+        p.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_RetourActionPerformed
 
     /**
      * @param args the command line arguments
