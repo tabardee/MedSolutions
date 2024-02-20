@@ -56,7 +56,7 @@
                           <Component id="LogoMedSolutions" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="InfoPatient4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="InfoPatient7" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPanel8" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="32767" attributes="0"/>
@@ -79,13 +79,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="InfoPatient4" min="-2" pref="187" max="-2" attributes="0"/>
+                          <Component id="InfoPatient7" min="-2" pref="187" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="617" max="32767" attributes="0"/>
+                          <EmptySpace pref="596" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="LogoCHU" alignment="1" min="-2" pref="233" max="-2" attributes="0"/>
                               <Component id="LogoMedSolutions" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -97,7 +97,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="InfoPatient4">
+        <Container class="javax.swing.JPanel" name="InfoPatient7">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -118,51 +118,51 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="infoN4" min="-2" max="-2" attributes="0"/>
+                              <Component id="infoN8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jTextField33" min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="jTextField60" min="-2" pref="95" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="infoAdresse8" min="-2" max="-2" attributes="0"/>
+                              <Component id="infoAdresse14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextField35" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="jTextField62" min="-2" pref="85" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="infoNumSS8" min="-2" max="-2" attributes="0"/>
+                              <Component id="infoNumSS14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField36" min="-2" pref="96" max="-2" attributes="0"/>
+                              <Component id="jTextField63" min="-2" pref="96" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="infoP4" min="-2" max="-2" attributes="0"/>
+                              <Component id="infoP8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField34" min="-2" pref="101" max="-2" attributes="0"/>
+                              <Component id="jTextField61" min="-2" pref="101" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="infoAdresse9" min="-2" max="-2" attributes="0"/>
+                              <Component id="infoAdresse15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField39" max="32767" attributes="0"/>
+                              <Component id="jTextField66" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="date9" min="-2" max="-2" attributes="0"/>
+                              <Component id="date16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="jTextField38" min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="jTextField65" min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="date8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="infoNumSS9" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="date15" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="infoNumSS15" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField40" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
-                          <Component id="jTextField37" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                          <Component id="jTextField67" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="jTextField64" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -175,34 +175,34 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="date9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="date16" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="infoN4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="infoP4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="infoN8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="infoP8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField61" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jTextField33" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField60" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="date8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="date15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField64" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField65" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="infoAdresse8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField35" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="infoNumSS8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField36" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="infoAdresse9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="infoNumSS9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="infoAdresse14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField62" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="infoNumSS14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField63" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="infoAdresse15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField66" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="infoNumSS15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField67" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
@@ -210,7 +210,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="infoN4">
+            <Component class="javax.swing.JLabel" name="infoN8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -218,7 +218,7 @@
                 <Property name="text" type="java.lang.String" value="Nom"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="infoP4">
+            <Component class="javax.swing.JLabel" name="infoP8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -226,7 +226,7 @@
                 <Property name="text" type="java.lang.String" value="Pr&#xe9;nom"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="date8">
+            <Component class="javax.swing.JLabel" name="date15">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -234,7 +234,7 @@
                 <Property name="text" type="java.lang.String" value="Date de naissance"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="infoAdresse8">
+            <Component class="javax.swing.JLabel" name="infoAdresse14">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -242,7 +242,7 @@
                 <Property name="text" type="java.lang.String" value="Identifiant IPP"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="infoNumSS8">
+            <Component class="javax.swing.JLabel" name="infoNumSS14">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -250,32 +250,32 @@
                 <Property name="text" type="java.lang.String" value="Adresse"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField33">
+            <Component class="javax.swing.JTextField" name="jTextField60">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField34">
+            <Component class="javax.swing.JTextField" name="jTextField61">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField35">
+            <Component class="javax.swing.JTextField" name="jTextField62">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField36">
+            <Component class="javax.swing.JTextField" name="jTextField63">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField37">
+            <Component class="javax.swing.JTextField" name="jTextField64">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="date9">
+            <Component class="javax.swing.JLabel" name="date16">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -283,12 +283,12 @@
                 <Property name="text" type="java.lang.String" value="Sexe"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField38">
+            <Component class="javax.swing.JTextField" name="jTextField65">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="infoAdresse9">
+            <Component class="javax.swing.JLabel" name="infoAdresse15">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -296,12 +296,12 @@
                 <Property name="text" type="java.lang.String" value="Service"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField39">
+            <Component class="javax.swing.JTextField" name="jTextField66">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="infoNumSS9">
+            <Component class="javax.swing.JLabel" name="infoNumSS15">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="12" style="2"/>
@@ -309,7 +309,7 @@
                 <Property name="text" type="java.lang.String" value="N&#xb0; de chambre"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField40">
+            <Component class="javax.swing.JTextField" name="jTextField67">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>

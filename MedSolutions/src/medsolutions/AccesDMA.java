@@ -5,6 +5,8 @@
  */
 package medsolutions;
 import java.util.Date;
+import ca.uhn.hl7v2.*;
+
 
 /**
  *

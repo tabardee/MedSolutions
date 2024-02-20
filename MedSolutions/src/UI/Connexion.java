@@ -19,7 +19,7 @@ public class Connexion extends javax.swing.JFrame {
      */
     public Connexion() {
         initComponents();
-        setFullScreen();
+       setFullScreen();
     }
         private void setFullScreen() {
         // Obtenez la taille de l'écran

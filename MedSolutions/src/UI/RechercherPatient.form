@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -46,88 +46,27 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="DateNaissance" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="DateNaissanceTextField" min="-2" pref="243" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="NumeroIPP" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                      <Component id="NumIPPTextField" min="-2" pref="243" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="Nom" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="NomTextField" min="-2" pref="91" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="Prenom" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="PrenomTextField" min="-2" pref="91" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="Sexe" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="SexeTextField" min="-2" pref="91" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="CodePostal" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="NumRue" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="NumRueTextField" min="-2" pref="100" max="-2" attributes="0"/>
-                                              <Component id="CodePostalTextField" min="-2" pref="100" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Annuler" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="Chercher" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Ville" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="VilleTextField" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Rue" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="RueTextField" min="-2" pref="122" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="TitrePage" min="-2" pref="436" max="-2" attributes="0"/>
                               <Component id="LogoMedSolutions" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="378" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Retour" min="-2" max="-2" attributes="0"/>
                               <Component id="LogoCHU" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jPanel3" max="32767" attributes="0"/>
+                              <Component id="jPanel1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -139,56 +78,11 @@
                       <Component id="TitrePage" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Retour" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="150" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Nom" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Prenom" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PrenomTextField" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="Sexe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="SexeTextField" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                      <Component id="NomTextField" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="NumeroIPP" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NumIPPTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="DateNaissanceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DateNaissance" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="NumRue" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NumRueTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Rue" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="RueTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="CodePostal" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CodePostalTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Ville" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="VilleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Chercher" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Annuler" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="73" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="9" max="32767" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="32767" attributes="0"/>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="LogoMedSolutions" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="LogoCHU" alignment="1" min="-2" pref="233" max="-2" attributes="0"/>
@@ -199,76 +93,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="NumeroIPP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Num&#xe9;ro IPP"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="NumIPPTextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NumIPPTextFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="DateNaissance">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Date de naissance"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="DateNaissanceTextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DateNaissanceTextFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="NumRue">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="N&#xb0; de rue"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Rue">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Rue"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Ville">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ville"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="CodePostal">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Code Postal"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="RueTextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RueTextFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="NumRueTextField">
-        </Component>
-        <Component class="javax.swing.JTextField" name="VilleTextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VilleTextFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="CodePostalTextField">
-        </Component>
-        <Component class="javax.swing.JButton" name="Chercher">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Chercher"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChercherActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="Annuler">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Annuler"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnnulerActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="TitrePage">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -279,30 +103,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Princeton Plainsboro - Rechercher un patient"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="NomTextField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="Nom">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nom"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Prenom">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pr&#xe9;nom"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="PrenomTextField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="Sexe">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Sexe"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="SexeTextField">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexeTextFieldActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="LogoCHU">
           <Properties>
@@ -349,11 +149,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="764" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="740" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="773" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -382,15 +182,40 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
+                    <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="4">
+                      <Table columnCount="7" rowCount="0">
                         <Column editable="false" title="Nom" type="java.lang.Object"/>
                         <Column editable="false" title="Pr&#xe9;nom" type="java.lang.Object"/>
+                        <Column editable="false" title="Sexe" type="java.lang.Object"/>
                         <Column editable="false" title="N&#xb0; IPP" type="java.lang.Object"/>
+                        <Column editable="false" title="Date de Naissance" type="java.lang.Object"/>
+                        <Column editable="false" title="N&#xb0; de chambre" type="java.lang.Object"/>
+                        <Column editable="false" title="Service" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
@@ -415,6 +240,190 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Rechercher un patient">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="Annuler" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Chercher" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="NumIPPTextField1" linkSize="1" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Nom" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="NomTextField" linkSize="1" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                      <Component id="Prenom" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="DateNaissance" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="DateNaissanceTextField" linkSize="1" min="-2" pref="52" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="DateNaissance1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="PrenomTextField" linkSize="1" min="-2" pref="64" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="Sexe" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="SexeTextField" linkSize="1" min="-2" pref="55" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="NumeroIPP1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="NumeroIPP" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="NumIPPTextField" linkSize="1" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="DateNaissanceTextField1" linkSize="1" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="201" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Prenom" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Nom" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Sexe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NumeroIPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NomTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NumIPPTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PrenomTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="SexeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="NumeroIPP1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DateNaissanceTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="DateNaissance" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DateNaissance1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="NumIPPTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DateNaissanceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Chercher" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Annuler" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="Chercher">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Chercher"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="Annuler">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="13" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Annuler"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="NumeroIPP1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xb0; de chambre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="NumeroIPP">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xb0; IPP"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Nom">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nom"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="NomTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="NumIPPTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="NumIPPTextField1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="Prenom">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pr&#xe9;nom"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="PrenomTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="DateNaissance">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Date de naissance"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="DateNaissance1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Service"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="DateNaissanceTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="DateNaissanceTextField1">
+            </Component>
+            <Component class="javax.swing.JTextField" name="SexeTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="Sexe">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sexe"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

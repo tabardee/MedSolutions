@@ -37,6 +37,10 @@ public class AjouterPatient extends javax.swing.JFrame {
 
         AjouterPatient = new javax.swing.JPanel();
         TitrePage = new javax.swing.JLabel();
+        Retour = new javax.swing.JButton();
+        LogoCHU = new javax.swing.JLabel();
+        LogoMedSolutions = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         Nom = new javax.swing.JLabel();
         NomTextField = new javax.swing.JTextField();
         Prenom = new javax.swing.JLabel();
@@ -56,11 +60,8 @@ public class AjouterPatient extends javax.swing.JFrame {
         RueTextField = new javax.swing.JTextField();
         Valider = new javax.swing.JButton();
         Annuler = new javax.swing.JButton();
-        Retour = new javax.swing.JButton();
         Sexe = new javax.swing.JLabel();
         SexeTextField = new javax.swing.JTextField();
-        LogoCHU = new javax.swing.JLabel();
-        LogoMedSolutions = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,6 +70,21 @@ public class AjouterPatient extends javax.swing.JFrame {
         TitrePage.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
         TitrePage.setText("Princeton Plainsboro - Ajouter un patient");
+
+        Retour.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Retour.setText("Retour");
+        Retour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetourActionPerformed(evt);
+            }
+        });
+
+        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
+
+        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Ajouter un patient", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
+        jPanel1.setFocusable(false);
 
         Nom.setText("Nom");
 
@@ -81,6 +97,7 @@ public class AjouterPatient extends javax.swing.JFrame {
         Prenom.setText("Prénom");
 
         PrenomTextField.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        PrenomTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         PrenomTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PrenomTextFieldActionPerformed(evt);
@@ -154,14 +171,6 @@ public class AjouterPatient extends javax.swing.JFrame {
             }
         });
 
-        Retour.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Retour.setText("Retour");
-        Retour.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RetourActionPerformed(evt);
-            }
-        });
-
         Sexe.setText("Sexe");
 
         SexeTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -170,86 +179,129 @@ public class AjouterPatient extends javax.swing.JFrame {
             }
         });
 
-        LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CodePostal, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(NumIPP)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Sexe)
+                            .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Adresse))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(NomTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                .addComponent(CodePostalTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                                .addComponent(NumTextField, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(DateNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(Rue, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(74, 74, 74)))
+                            .addComponent(Ville, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(Annuler)
+                        .addGap(18, 18, 18)
+                        .addComponent(Valider)))
+                .addGap(80, 80, 80))
+        );
 
-        LogoMedSolutions.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo_medsolutions.png")); // NOI18N
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CodePostalTextField, DateNaisanceTextField, NomTextField, NumIPPTextField, RueTextField, SexeTextField, VilleTextField});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Prenom))
+                            .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(DateNaissance)
+                            .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Nom)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Sexe)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NumIPP)))
+                .addGap(21, 21, 21)
+                .addComponent(Adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Rue)
+                    .addComponent(NumTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Numero))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CodePostalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ville)
+                    .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CodePostal))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Annuler)
+                    .addComponent(Valider))
+                .addGap(23, 23, 23))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CodePostalTextField, DateNaisanceTextField, NomTextField, NumIPPTextField, RueTextField, SexeTextField, VilleTextField});
 
         javax.swing.GroupLayout AjouterPatientLayout = new javax.swing.GroupLayout(AjouterPatient);
         AjouterPatient.setLayout(AjouterPatientLayout);
         AjouterPatientLayout.setHorizontalGroup(
             AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AjouterPatientLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                        .addContainerGap(100, Short.MAX_VALUE)
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                .addComponent(Adresse)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(NumIPP)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                                        .addGap(51, 51, 51)
-                                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(CodePostal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Numero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(Sexe)
-                                        .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(CodePostalTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(NumTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Annuler, javax.swing.GroupLayout.Alignment.TRAILING))
-                                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                .addGap(25, 25, 25)
-                                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                            .addComponent(Prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                            .addComponent(DateNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addGap(18, 18, 18)
-                                                            .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                        .addComponent(Rue, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(74, 74, 74))))
-                                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                .addGap(25, 25, 25)
-                                                .addComponent(Ville, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(Valider)))
-                                        .addGap(0, 149, Short.MAX_VALUE))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Retour))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LogoMedSolutions)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(LogoCHU)))
                 .addContainerGap())
+            .addGroup(AjouterPatientLayout.createSequentialGroup()
+                .addContainerGap(129, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
         );
-
-        AjouterPatientLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CodePostalTextField, DateNaisanceTextField, NomTextField, NumIPPTextField, PrenomTextField, RueTextField, SexeTextField, VilleTextField});
-
         AjouterPatientLayout.setVerticalGroup(
             AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AjouterPatientLayout.createSequentialGroup()
@@ -257,58 +309,14 @@ public class AjouterPatient extends javax.swing.JFrame {
                 .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Retour)
                     .addComponent(TitrePage))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
-                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Prenom)
-                        .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Nom, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DateNaissance)
-                    .addComponent(DateNaisanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Sexe))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(NumIPP)
-                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addComponent(Adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(Numero))
-                            .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Rue)
-                                .addComponent(NumTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AjouterPatientLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(CodePostalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Ville)
-                                    .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(AjouterPatientLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CodePostal)))
-                        .addGap(12, 12, 12)
-                        .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Annuler)
-                            .addComponent(Valider))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LogoCHU))
-                    .addGroup(AjouterPatientLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LogoMedSolutions)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(AjouterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LogoCHU)
+                    .addComponent(LogoMedSolutions))
                 .addContainerGap())
         );
-
-        AjouterPatientLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CodePostalTextField, DateNaisanceTextField, NomTextField, NumIPPTextField, PrenomTextField, RueTextField, SexeTextField, VilleTextField});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -330,57 +338,56 @@ public class AjouterPatient extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NomTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NomTextFieldActionPerformed
-
-    private void DateNaisanceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateNaisanceTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DateNaisanceTextFieldActionPerformed
-
-    private void NumTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumTextFieldActionPerformed
-
-    private void VilleTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VilleTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VilleTextFieldActionPerformed
-
-    private void ValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValiderActionPerformed
-        //Vérification que tous les champs sont remplis
-    }//GEN-LAST:event_ValiderActionPerformed
-
-    private void AnnulerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AnnulerMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AnnulerMouseClicked
-
-    private void AnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnulerActionPerformed
-
-        
-    }//GEN-LAST:event_AnnulerActionPerformed
-
-    private void SexeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexeTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SexeTextFieldActionPerformed
-
-    private void CodePostalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodePostalTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CodePostalTextFieldActionPerformed
-
-    private void NumIPPTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIPPTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumIPPTextFieldActionPerformed
-
-    private void PrenomTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrenomTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PrenomTextFieldActionPerformed
-
     private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
         // TODO add your handling code here:
         Patients p = new Patients();
         p.setVisible(true);
         this.hide();
     }//GEN-LAST:event_RetourActionPerformed
+
+    private void SexeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SexeTextFieldActionPerformed
+
+    private void AnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnulerActionPerformed
+
+    }//GEN-LAST:event_AnnulerActionPerformed
+
+    private void AnnulerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AnnulerMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnnulerMouseClicked
+
+    private void ValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValiderActionPerformed
+        //Vérification que tous les champs sont remplis
+    }//GEN-LAST:event_ValiderActionPerformed
+
+    private void VilleTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VilleTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VilleTextFieldActionPerformed
+
+    private void CodePostalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodePostalTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CodePostalTextFieldActionPerformed
+
+    private void NumTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumTextFieldActionPerformed
+
+    private void NumIPPTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIPPTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumIPPTextFieldActionPerformed
+
+    private void DateNaisanceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateNaisanceTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DateNaisanceTextFieldActionPerformed
+
+    private void PrenomTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrenomTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PrenomTextFieldActionPerformed
+
+    private void NomTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -444,5 +451,6 @@ public class AjouterPatient extends javax.swing.JFrame {
     private javax.swing.JButton Valider;
     private javax.swing.JLabel Ville;
     private javax.swing.JTextField VilleTextField;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

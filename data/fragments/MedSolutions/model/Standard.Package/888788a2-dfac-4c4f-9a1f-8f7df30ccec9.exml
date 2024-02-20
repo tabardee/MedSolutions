@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="medsolutions" version="4">
+  <OBJECT>
+    <ID name="medsolutions" mc="Standard.Package" uid="888788a2-dfac-4c4f-9a1f-8f7df30ccec9"/>
+    <PID name="MedSolutions" mc="Standard.Project" uid="5c101079-c42b-412d-a714-976c71f2498b"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[medsolutions]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Connexion" mc="Standard.Class" uid="41db8f0c-81bd-4e92-af77-9a3ba4866300"/>
+        <COMPID name="DM" mc="Standard.Class" uid="d8578b0c-0a9c-48ee-aef7-85c0d1f46e26"/>
+        <COMPID name="Service" mc="Standard.Class" uid="15bd94db-0d31-4630-974e-fabb64ecb820"/>
+        <COMPID name="DateVenue" mc="Standard.Class" uid="f294eadf-4d99-4efc-b192-8ff45cdf6b0a"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagramme de classe medsolutions" mc="Standard.ClassDiagram" uid="5a95ab01-4bd5-4bed-a346-43ce88fae076"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

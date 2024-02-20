@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="MedSolutions" version="4">
+  <OBJECT>
+    <ID name="MedSolutions" mc="Infrastructure.DiagramSet" uid="536bd5b9-529d-4302-9180-46bec2a5e08b"/>
+    <PID name="MedSolutions" mc="Standard.Project" uid="5c101079-c42b-412d-a714-976c71f2498b"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[MedSolutions]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

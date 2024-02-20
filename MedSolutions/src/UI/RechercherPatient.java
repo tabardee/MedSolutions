@@ -37,103 +37,38 @@ public class RechercherPatient extends javax.swing.JFrame {
     private void initComponents() {
 
         RechercherPatient = new javax.swing.JPanel();
-        NumeroIPP = new javax.swing.JLabel();
-        NumIPPTextField = new javax.swing.JTextField();
-        DateNaissance = new javax.swing.JLabel();
-        DateNaissanceTextField = new javax.swing.JTextField();
-        NumRue = new javax.swing.JLabel();
-        Rue = new javax.swing.JLabel();
-        Ville = new javax.swing.JLabel();
-        CodePostal = new javax.swing.JLabel();
-        RueTextField = new javax.swing.JTextField();
-        NumRueTextField = new javax.swing.JTextField();
-        VilleTextField = new javax.swing.JTextField();
-        CodePostalTextField = new javax.swing.JTextField();
-        Chercher = new javax.swing.JButton();
-        Annuler = new javax.swing.JButton();
         TitrePage = new javax.swing.JLabel();
-        NomTextField = new javax.swing.JTextField();
-        Nom = new javax.swing.JLabel();
-        Prenom = new javax.swing.JLabel();
-        PrenomTextField = new javax.swing.JTextField();
-        Sexe = new javax.swing.JLabel();
-        SexeTextField = new javax.swing.JTextField();
         LogoCHU = new javax.swing.JLabel();
         LogoMedSolutions = new javax.swing.JLabel();
         Retour = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        Chercher = new javax.swing.JButton();
+        Annuler = new javax.swing.JButton();
+        NumeroIPP1 = new javax.swing.JLabel();
+        NumeroIPP = new javax.swing.JLabel();
+        Nom = new javax.swing.JLabel();
+        NomTextField = new javax.swing.JTextField();
+        NumIPPTextField = new javax.swing.JTextField();
+        NumIPPTextField1 = new javax.swing.JTextField();
+        Prenom = new javax.swing.JLabel();
+        PrenomTextField = new javax.swing.JTextField();
+        DateNaissance = new javax.swing.JLabel();
+        DateNaissance1 = new javax.swing.JLabel();
+        DateNaissanceTextField = new javax.swing.JTextField();
+        DateNaissanceTextField1 = new javax.swing.JTextField();
+        SexeTextField = new javax.swing.JTextField();
+        Sexe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RechercherPatient.setBackground(new java.awt.Color(255, 255, 255));
 
-        NumeroIPP.setText("Numéro IPP");
-
-        NumIPPTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NumIPPTextFieldActionPerformed(evt);
-            }
-        });
-
-        DateNaissance.setText("Date de naissance");
-
-        DateNaissanceTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DateNaissanceTextFieldActionPerformed(evt);
-            }
-        });
-
-        NumRue.setText("N° de rue");
-
-        Rue.setText("Rue");
-
-        Ville.setText("Ville");
-
-        CodePostal.setText("Code Postal");
-
-        RueTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RueTextFieldActionPerformed(evt);
-            }
-        });
-
-        VilleTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VilleTextFieldActionPerformed(evt);
-            }
-        });
-
-        Chercher.setText("Chercher");
-        Chercher.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChercherActionPerformed(evt);
-            }
-        });
-
-        Annuler.setText("Annuler");
-        Annuler.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnnulerActionPerformed(evt);
-            }
-        });
-
         TitrePage.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         TitrePage.setForeground(new java.awt.Color(178, 12, 25));
         TitrePage.setText("Princeton Plainsboro - Rechercher un patient");
-
-        Nom.setText("Nom");
-
-        Prenom.setText("Prénom");
-
-        Sexe.setText("Sexe");
-
-        SexeTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SexeTextFieldActionPerformed(evt);
-            }
-        });
 
         LogoCHU.setIcon(new javax.swing.ImageIcon("C:\\Users\\emmat\\Documents\\TIS4\\Projet\\MedSolutions\\MedSolutions\\src\\images\\logo.PNG")); // NOI18N
         LogoCHU.setPreferredSize(new java.awt.Dimension(250, 414));
@@ -151,19 +86,17 @@ public class RechercherPatient extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des patients", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
 
+        jTable1.setAutoCreateRowSorter(true);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Nom", "Prénom", "N° IPP"
+                "Nom", "Prénom", "Sexe", "N° IPP", "Date de Naissance", "N° de chambre", "Service"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -176,11 +109,11 @@ public class RechercherPatient extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 764, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel3Layout.setVerticalGroup(
@@ -193,6 +126,111 @@ public class RechercherPatient extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Rechercher un patient"));
+
+        Chercher.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        Chercher.setText("Chercher");
+
+        Annuler.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        Annuler.setText("Annuler");
+
+        NumeroIPP1.setText("N° de chambre");
+
+        NumeroIPP.setText("N° IPP");
+
+        Nom.setText("Nom");
+
+        Prenom.setText("Prénom");
+
+        DateNaissance.setText("Date de naissance");
+
+        DateNaissance1.setText("Service");
+
+        Sexe.setText("Sexe");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Annuler)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Chercher)
+                        .addGap(18, 18, 18)
+                        .addComponent(NumIPPTextField1)
+                        .addGap(13, 13, 13))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Nom)
+                                .addGap(18, 18, 18)
+                                .addComponent(NomTextField)
+                                .addGap(49, 49, 49)
+                                .addComponent(Prenom))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(DateNaissance)
+                                .addGap(18, 18, 18)
+                                .addComponent(DateNaissanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DateNaissance1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(Sexe)))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(NumeroIPP1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(NumeroIPP)
+                        .addGap(18, 18, 18)
+                        .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DateNaissanceTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(201, Short.MAX_VALUE))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {DateNaissanceTextField, DateNaissanceTextField1, NomTextField, NumIPPTextField, NumIPPTextField1, PrenomTextField, SexeTextField});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Prenom)
+                    .addComponent(Nom)
+                    .addComponent(Sexe)
+                    .addComponent(NumeroIPP)
+                    .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(NumeroIPP1)
+                        .addComponent(DateNaissanceTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(DateNaissance)
+                        .addComponent(DateNaissance1)
+                        .addComponent(NumIPPTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DateNaissanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Chercher)
+                    .addComponent(Annuler))
+                .addGap(33, 33, 33))
+        );
+
         javax.swing.GroupLayout RechercherPatientLayout = new javax.swing.GroupLayout(RechercherPatient);
         RechercherPatient.setLayout(RechercherPatientLayout);
         RechercherPatientLayout.setHorizontalGroup(
@@ -201,67 +239,20 @@ public class RechercherPatient extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RechercherPatientLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                    .addComponent(DateNaissance)
-                                    .addGap(24, 24, 24)
-                                    .addComponent(DateNaissanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                    .addComponent(NumeroIPP)
-                                    .addGap(61, 61, 61)
-                                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                .addComponent(Nom)
-                                .addGap(18, 18, 18)
-                                .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(Prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Sexe, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(CodePostal)
-                                            .addComponent(NumRue))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(NumRueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(CodePostalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                        .addComponent(Annuler)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Chercher)))
-                                .addGap(24, 24, 24)
-                                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                        .addComponent(Ville)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(VilleTextField))
-                                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                                        .addComponent(Rue)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(RechercherPatientLayout.createSequentialGroup()
                         .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TitrePage, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LogoMedSolutions))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 378, Short.MAX_VALUE)
                         .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Retour)
-                            .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(LogoCHU, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(RechercherPatientLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(RechercherPatientLayout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
         );
         RechercherPatientLayout.setVerticalGroup(
             RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,46 +261,11 @@ public class RechercherPatient extends javax.swing.JFrame {
                 .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TitrePage)
                     .addComponent(Retour))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Nom)
-                    .addComponent(Prenom)
-                    .addComponent(PrenomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Sexe)
-                    .addComponent(SexeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NomTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NumeroIPP)
-                    .addComponent(NumIPPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DateNaissanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DateNaissance))
-                .addGap(18, 18, 18)
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NumRue)
-                    .addComponent(NumRueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Rue)
-                    .addComponent(RueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CodePostal)
-                            .addComponent(CodePostalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(RechercherPatientLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Ville)
-                            .addComponent(VilleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(28, 28, 28)
-                .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Chercher)
-                    .addComponent(Annuler))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGap(129, 129, 129)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addGroup(RechercherPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LogoMedSolutions, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LogoCHU, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -329,38 +285,6 @@ public class RechercherPatient extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void NumIPPTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIPPTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NumIPPTextFieldActionPerformed
-
-    private void DateNaissanceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateNaissanceTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DateNaissanceTextFieldActionPerformed
-
-    private void RueTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RueTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RueTextFieldActionPerformed
-
-    private void VilleTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VilleTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VilleTextFieldActionPerformed
-
-    private void ChercherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChercherActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_ChercherActionPerformed
-
-    private void AnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnulerActionPerformed
-        // TODO add your handling code here:
-        Patients p = new Patients();
-        p.setVisible(true);
-        this.hide();
-    }//GEN-LAST:event_AnnulerActionPerformed
-
-    private void SexeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexeTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SexeTextFieldActionPerformed
 
     private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
         // TODO add your handling code here:
@@ -407,29 +331,26 @@ public class RechercherPatient extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Annuler;
     private javax.swing.JButton Chercher;
-    private javax.swing.JLabel CodePostal;
-    private javax.swing.JTextField CodePostalTextField;
     private javax.swing.JLabel DateNaissance;
+    private javax.swing.JLabel DateNaissance1;
     private javax.swing.JTextField DateNaissanceTextField;
+    private javax.swing.JTextField DateNaissanceTextField1;
     private javax.swing.JLabel LogoCHU;
     private javax.swing.JLabel LogoMedSolutions;
     private javax.swing.JLabel Nom;
     private javax.swing.JTextField NomTextField;
     private javax.swing.JTextField NumIPPTextField;
-    private javax.swing.JLabel NumRue;
-    private javax.swing.JTextField NumRueTextField;
+    private javax.swing.JTextField NumIPPTextField1;
     private javax.swing.JLabel NumeroIPP;
+    private javax.swing.JLabel NumeroIPP1;
     private javax.swing.JLabel Prenom;
     private javax.swing.JTextField PrenomTextField;
     private javax.swing.JPanel RechercherPatient;
     private javax.swing.JButton Retour;
-    private javax.swing.JLabel Rue;
-    private javax.swing.JTextField RueTextField;
     private javax.swing.JLabel Sexe;
     private javax.swing.JTextField SexeTextField;
     private javax.swing.JLabel TitrePage;
-    private javax.swing.JLabel Ville;
-    private javax.swing.JTextField VilleTextField;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
